@@ -45,16 +45,10 @@ INSTALLED_APPS = [
     'userauths',
     'taggit',
     'ckeditor',
-    # 'rest_framework',
-    # 'rest_framework_simplejwt',
-    # 'rest_framework_simplejwt.token_blacklist',
     'drf_yasg',
-    # 'django.contrib.sites',
     'allauth',
     'allauth.account',
-    # 'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.facebook',
+
 ]
 
 MIDDLEWARE = [
@@ -87,20 +81,8 @@ TEMPLATES = [
     },
 ]
 
-# REST_FRAMEWORK = {
-#     # 'DEFAULT_AUTHENTICATION_CLASSES': (
-#     #     'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     # ),
-#     # 'DEFAULT_PERMISSION_CLASSES': (
-#     #     'rest_framework.permissions.IsAuthenticated',
-#     # ),
-# }
 
 WSGI_APPLICATION = 'shop.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -109,18 +91,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'shoponline',
-#         'USER' : 'root',
-#         'PASSWORD' : '',
-#         'HOST' : 'localhost' 
-#     }
-# }
-
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -162,8 +132,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 AUTH_USER_MODEL = 'userauths.User'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 JAZZMIN_SETTINGS = {
@@ -192,35 +160,5 @@ CKEDITOR_CONFIGS = {
     
 PAYPAL_RECEIVER_EMAIL = 'nguoiban123456@gmail.com'
 PAYPAL_TEST = True
-
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-#     'allauth.account.auth_backends.AuthenticationBackend',
-# ]
-
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google' : {
-#         'APP': {
-#             'client_id' : '571607333156-hpqgqfrfmfp2deen1lhtj617ejososc0.apps.googleusercontent.com',
-#             'secret' : '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',
-#             'key' : '',
-#         },
-#         'SCOPE': [
-#             'profile',
-#         ]
-#     },
-#     'facebook' : {
-#         'APP': {
-#             'client_id' : '692982425996665',
-#             'secret' : '3a498f878fdccb3d98f4ed40e7e2dcd2',
-#         }
-#     }
-# }
-
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-# }
-
 
 LOGIN_REDIRECT_URL = '/'

@@ -163,7 +163,7 @@ class ProductReview(models.Model):
 
     class Meta:
         # dat lai hien name
-        verbose_name_plural = "Product Reviews"
+        verbose_name_plural = "View Products"
     
     def __str__(self):
         return self.product.title
